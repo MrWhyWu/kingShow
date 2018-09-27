@@ -1,0 +1,74 @@
+package org.jupiter.common.concurrent.disruptor;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public enum WaitStrategyType
+{
+  BLOCKING_WAIT, 
+  LITE_BLOCKING_WAIT, 
+  TIMEOUT_BLOCKING_WAIT, 
+  LITE_TIMEOUT_BLOCKING_WAIT, 
+  PHASED_BACK_OFF_WAIT, 
+  SLEEPING_WAIT, 
+  YIELDING_WAIT, 
+  BUSY_SPIN_WAIT;
+  
+  private WaitStrategyType() {}
+  public static WaitStrategyType parse(String name) { for (WaitStrategyType strategy : ) {
+      if (strategy.name().equalsIgnoreCase(name)) {
+        return strategy;
+      }
+    }
+    return null;
+  }
+}

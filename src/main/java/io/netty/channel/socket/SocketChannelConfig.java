@@ -1,0 +1,70 @@
+package io.netty.channel.socket;
+
+import io.netty.buffer.ByteBufAllocator;
+import io.netty.channel.ChannelConfig;
+import io.netty.channel.MessageSizeEstimator;
+import io.netty.channel.RecvByteBufAllocator;
+import io.netty.channel.WriteBufferWaterMark;
+
+public abstract interface SocketChannelConfig
+  extends ChannelConfig
+{
+  public abstract boolean isTcpNoDelay();
+  
+  public abstract SocketChannelConfig setTcpNoDelay(boolean paramBoolean);
+  
+  public abstract int getSoLinger();
+  
+  public abstract SocketChannelConfig setSoLinger(int paramInt);
+  
+  public abstract int getSendBufferSize();
+  
+  public abstract SocketChannelConfig setSendBufferSize(int paramInt);
+  
+  public abstract int getReceiveBufferSize();
+  
+  public abstract SocketChannelConfig setReceiveBufferSize(int paramInt);
+  
+  public abstract boolean isKeepAlive();
+  
+  public abstract SocketChannelConfig setKeepAlive(boolean paramBoolean);
+  
+  public abstract int getTrafficClass();
+  
+  public abstract SocketChannelConfig setTrafficClass(int paramInt);
+  
+  public abstract boolean isReuseAddress();
+  
+  public abstract SocketChannelConfig setReuseAddress(boolean paramBoolean);
+  
+  public abstract SocketChannelConfig setPerformancePreferences(int paramInt1, int paramInt2, int paramInt3);
+  
+  public abstract boolean isAllowHalfClosure();
+  
+  public abstract SocketChannelConfig setAllowHalfClosure(boolean paramBoolean);
+  
+  public abstract SocketChannelConfig setConnectTimeoutMillis(int paramInt);
+  
+  @Deprecated
+  public abstract SocketChannelConfig setMaxMessagesPerRead(int paramInt);
+  
+  public abstract SocketChannelConfig setWriteSpinCount(int paramInt);
+  
+  public abstract SocketChannelConfig setAllocator(ByteBufAllocator paramByteBufAllocator);
+  
+  public abstract SocketChannelConfig setRecvByteBufAllocator(RecvByteBufAllocator paramRecvByteBufAllocator);
+  
+  public abstract SocketChannelConfig setAutoRead(boolean paramBoolean);
+  
+  public abstract SocketChannelConfig setAutoClose(boolean paramBoolean);
+  
+  public abstract SocketChannelConfig setMessageSizeEstimator(MessageSizeEstimator paramMessageSizeEstimator);
+  
+  public abstract SocketChannelConfig setWriteBufferWaterMark(WriteBufferWaterMark paramWriteBufferWaterMark);
+}
+
+
+/* Location:           C:\Users\LX\Desktop\新建文件夹 (2)\
+ * Qualified Name:     io.netty.channel.socket.SocketChannelConfig
+ * JD-Core Version:    0.7.0.1
+ */

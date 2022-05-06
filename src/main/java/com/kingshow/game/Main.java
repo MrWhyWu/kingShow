@@ -13,6 +13,7 @@ public class Main
   
   public static void main(String[] args)
   {
+    system.out.println("为什么没有智能提示？");
     ctx = new AnnotationConfigApplicationContext(new Class[] { MainConfig.class });
     
     ctx.registerShutdownHook();
